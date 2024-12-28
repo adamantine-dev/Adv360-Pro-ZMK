@@ -32,6 +32,10 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+
+    zmk_studio: zmk_studio_unlock {
+        bindings = <&studio_unlock>;
+    };
   };
 
     keymap {

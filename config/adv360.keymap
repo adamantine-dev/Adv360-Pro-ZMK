@@ -34,6 +34,7 @@
     };
 
     zmk_studio: zmk_studio_unlock {
+        label = "ZMK_STUDIO_UNLOCK";
         bindings = <&studio_unlock>;
     };
   };

@@ -7,11 +7,6 @@ config BOARD_ENABLE_DCDC
     depends on BOARD_ADV360_LEFT || BOARD_ADV360_RIGHT
 
 # code below is from https://github.com/zmkfirmware/zmk/blob/main/app/Kconfig
-mainmenu "ZMK Firmware"
-
-menu "ZMK"
-
-menu "HID"
 
 config ZMK_HID_REPORT_TYPE_NKRO
     bool "Full N-Key Roll Over (NKRO) HID Report"
@@ -31,51 +26,6 @@ config ZMK_HID_KEYBOARD_NKRO_EXTENDED_REPORT
     help
       Enables higher usage range for NKRO (F13-F24 and INTL1-9).
       Please note this is not compatible with Android currently and you will get no input
-
-
-if ZMK_HID_REPORT_TYPE_HKRO
-
-config ZMK_HID_KEYBOARD_REPORT_SIZE
-    int "# Keyboard Keys Reportable"
-
-endif # ZMK_HID_REPORT_TYPE_HKRO
-
-config ZMK_HID_CONSUMER_REPORT_SIZE
-    int "# Consumer Keys Reportable"
-
-choice ZMK_HID_CONSUMER_REPORT_USAGES
-    prompt "HID Report Type"
-
-config ZMK_HID_CONSUMER_REPORT_USAGES_FULL
-    bool "Full Consumer HID Usage Support"
-    help
-      Enable full Consumer usage ID values to be sent to hosts. Allows for less
-      frequently used usages, but has compatibability issues with some host OSes.
-
-config ZMK_HID_CONSUMER_REPORT_USAGES_BASIC
-    bool "Basic Consumer HID Usage Support"
-    help
-      Enable Consumer usage ID values up to "Playback Speed - Slow" to be sent to
-      hosts. Allows for broader compatibability with more host OSes.
-
-endchoice
-
-config ZMK_HID_INDICATORS
-    bool "HID Indicators"
-    help
-      Enable HID indicators, used for detecting state of Caps/Scroll/Num Lock,
-      Kata, and Compose.
-
-config ZMK_HID_SEPARATE_MOD_RELEASE_REPORT
-    bool "Release Modifiers Separately"
-    help
-      Send a separate release event for the modifiers, to make sure the release
-      of the modifier doesn't get recognized before the actual key's release event.
-
-choice CBPRINTF_IMPLEMENTATION
-    default CBPRINTF_NANO
-
-endchoice
 
 module = ZMK
 module-str = zmk

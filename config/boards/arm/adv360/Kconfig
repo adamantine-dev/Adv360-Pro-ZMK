@@ -27,11 +27,3 @@ config ZMK_HID_KEYBOARD_NKRO_EXTENDED_REPORT
       Enables higher usage range for NKRO (F13-F24 and INTL1-9).
       Please note this is not compatible with Android currently and you will get no input
 
-module = ZMK
-module-str = zmk
-source "subsys/logging/Kconfig.template.log_config"
-
-# This loads ZMK's internal board and shield Kconfigs
-rsource "boards/Kconfig"
-rsource "boards/shields/*/Kconfig.defconfig"
-rsource "boards/shields/*/Kconfig.shield"

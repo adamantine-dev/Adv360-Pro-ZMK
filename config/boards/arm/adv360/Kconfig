@@ -253,7 +253,7 @@ endmenu # Output Types
 
 endmenu # HID
 
-rsource "src/split/Kconfig"
+# rsource "src/split/Kconfig"
 
 endmenu # Basic Keyboard Setup
 
@@ -277,11 +277,11 @@ endif # ZMK_KEYMAP_SETTINGS_STORAGE
 
 endmenu # Keymaps
 
-rsource "src/studio/Kconfig"
+# rsource "src/studio/Kconfig"
 
 menu "Display/LED Options"
 
-rsource "src/display/Kconfig"
+# rsource "src/display/Kconfig"
 
 menuconfig ZMK_RGB_UNDERGLOW
     bool "RGB Addressable LED Underglow"
@@ -372,7 +372,7 @@ endif # ZMK_BACKLIGHT
 
 endmenu # Display/LED Options
 
-rsource "src/pointing/Kconfig"
+# rsource "src/pointing/Kconfig"
 
 menu "Power Management"
 
@@ -468,7 +468,7 @@ config ZMK_BEHAVIORS_QUEUE_SIZE
     int "Maximum number of behaviors to allow queueing from a macro or other complex behavior"
     default 64
 
-rsource "Kconfig.behaviors"
+# rsource "Kconfig.behaviors"
 
 config ZMK_MACRO_DEFAULT_WAIT_MS
     int "Default time to wait (in milliseconds) before triggering the next behavior in macros"
@@ -694,24 +694,24 @@ endchoice
 
 module = ZMK
 module-str = zmk
-source "subsys/logging/Kconfig.template.log_config"
+# source "subsys/logging/Kconfig.template.log_config"
 
 # This loads ZMK's internal board and shield Kconfigs
-rsource "boards/Kconfig"
-rsource "boards/shields/*/Kconfig.defconfig"
-rsource "boards/shields/*/Kconfig.shield"
+# rsource "boards/Kconfig"
+# rsource "boards/shields/*/Kconfig.defconfig"
+# rsource "boards/shields/*/Kconfig.shield"
 
 # This loads custom shields defconfigs (from BOARD_ROOT)
 # Duplicated from Kconfig.zephyr
-osource "$(KCONFIG_BINARY_DIR)/Kconfig.shield.defconfig"
+# osource "$(KCONFIG_BINARY_DIR)/Kconfig.shield.defconfig"
 
 source "$(BOARD_DIR)/Kconfig.defconfig"
 
 # This loads board and shield Kconfigs found under zmk-config/config/
-osource "$(ZMK_CONFIG)/boards/shields/*/Kconfig.defconfig"
-osource "$(ZMK_CONFIG)/boards/shields/*/Kconfig.shield"
+# osource "$(ZMK_CONFIG)/boards/shields/*/Kconfig.defconfig"
+# osource "$(ZMK_CONFIG)/boards/shields/*/Kconfig.shield"
 
 # This loads ZMK's sensible defaults
-rsource "Kconfig.defaults"
+# rsource "Kconfig.defaults"
 
-source "Kconfig.zephyr"
+# source "Kconfig.zephyr"

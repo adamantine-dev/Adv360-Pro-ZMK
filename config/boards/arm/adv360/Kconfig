@@ -1,5 +1,7 @@
 # SPDX-License-Identifier: MIT
 
+CONFIG_ZMK_HID_KEYBOARD_NKRO_EXTENDED_REPORT=y
+
 config BOARD_ENABLE_DCDC
     bool "Enable DCDC mode"
     select SOC_DCDC_NRF52X

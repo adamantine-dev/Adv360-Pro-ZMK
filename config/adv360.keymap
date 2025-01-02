@@ -29,6 +29,20 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        td_chrome_prev_tab: td_chrome_prev_tab {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CHROME_PREV_TAB";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&kp LG(LA(LEFT))>;
+        };
+
+        td_chrome_next_tab: td_chrome_next_tab {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CHROME_NEXT_TAB";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LA(LG(RIGHT))>;
+        };
     };
 
     keymap {
@@ -66,11 +80,11 @@
 
         layer_mod {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none                &none                &none
+&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none                &none                &none
+&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none                &none                &none
+&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none                &none                &none
+&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &td_chrome_prev_tab  &td_chrome_next_tab  &none
             >;
         };
     };

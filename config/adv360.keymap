@@ -15,6 +15,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -82,11 +83,11 @@
 
         layer_mod {
             bindings = <
-&none  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none                 &none                    &none
-&none  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none                 &none                    &none
-&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none                 &none                    &none
-&none  &none           &none           &none            &macro_ver    &none                             &none      &none                                           &none  &none       &none       &mt LA(LG(LEFT)) DOT  &mt LA(LG(RIGHT)) SLASH  &none
-&none  &none           &none           &none            &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &td_chrome_prev_tab   &td_chrome_next_tab      &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none                 &none                    &none
+&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none                 &none                    &none
+&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none                 &none                    &none
+&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &mt LA(LG(LEFT)) DOT  &mt LA(LG(RIGHT)) SLASH  &none
+&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &td_chrome_prev_tab   &td_chrome_next_tab      &none
             >;
         };
 
@@ -97,6 +98,16 @@
 &kp ESCAPE  &kp A      &kp S     &kp D     &kp F     &kp G   &none          &kp LGUI               &kp LG(LC(LALT))      &kp RG(RCTRL)  &kp RGUI   &none      &kp H   &kp J           &kp K           &kp L         &kp SEMICOLON    &kp SQT
 &kp LSHFT   &kp Z      &kp X     &kp C     &kp V     &kp B                                         &kp LCTRL             &kp RCTRL                            &kp N   &kp M           &kp COMMA       &kp DOT       &kp FSLH         &kp RSHFT
 &mo 2       &kp GRAVE  &kp CAPS  &kp LBKT  &kp RBKT          &kp BACKSPACE  &kp LG(LC(LA(LSHFT)))  &kp LALT              &kp RALT       &kp ENTER  &kp SPACE          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &mo 2
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans          &trans          &trans           &trans  &trans                                      &trans  &trans  &trans             &trans             &trans            &trans  &trans
+&trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans                                      &trans  &trans  &trans             &mmv MOVE_Y(100)   &trans            &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_X(-100)  &mmv MOVE_Y(-100)  &mmv MOVE_X(100)  &trans  &trans
+&trans  &trans  &trans          &msc SCRL_UP    &trans           &trans                  &trans      &trans                  &trans  &trans             &msc MOVE_Y(5)     &trans            &trans  &trans
+&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT          &trans  &trans  &trans      &trans  &trans  &trans          &msc MOVE_X(-5)    &msc MOVE_Y(-5)    &msc MOVE_X(5)    &trans  &trans
             >;
         };
     };

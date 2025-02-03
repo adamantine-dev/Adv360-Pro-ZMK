@@ -102,10 +102,10 @@
         layer_5_test {
             bindings = <
 &trans  &trans   &trans          &trans          &trans           &trans   &trans                                      &trans  &trans  &trans             &trans             &trans            &trans  &trans
-&trans  &mkp MB4 &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB5 &trans                                      &trans  &trans  &trans             &mmv MOVE_Y(-500)  &trans            &trans  &trans
-&trans  &trans   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_X(-500)  &mmv MOVE_Y(500)   &mmv MOVE_X(500)  &trans  &trans
-&trans  &trans   &trans          &msc SCRL_DOWN  &trans           &trans                   &trans      &trans                  &trans  &trans             &msc MOVE_Y(-50)   &trans            &trans  &trans
-&trans  &trans   &msc SCRL_RIGHT &msc SCRL_UP    &msc SCRL_LEFT   &trans   &trans  &trans      &trans  &trans  &trans                  &msc MOVE_X(-50)   &msc MOVE_Y(50)    &msc MOVE_X(50)   &trans  &trans
+&trans  &mkp MB4 &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB5 &trans                                      &trans  &trans  &trans             &mmv MOVE_Y(-1500) &trans            &trans  &trans
+&trans  &trans   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_X(-1500) &mmv MOVE_Y(1500) &mmv MOVE_X(1500)  &trans  &trans
+&trans  &trans   &trans          &msc SCRL_DOWN  &trans           &trans                   &trans      &trans                  &trans  &trans             &msc MOVE_Y(-20)   &trans            &trans  &trans
+&trans  &trans   &msc SCRL_RIGHT &msc SCRL_UP    &msc SCRL_LEFT   &trans   &trans  &trans      &trans  &trans  &trans                  &msc MOVE_X(20)    &msc MOVE_Y(20)     &msc MOVE_X(-20)   &trans  &trans
             >;
         };
     };

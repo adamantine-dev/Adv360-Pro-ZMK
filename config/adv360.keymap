@@ -14,14 +14,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
         #include "macros.dtsi"
-    #include "version.dtsi"
+        #include "version.dtsi"
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -103,11 +101,11 @@
 
         layer_5_test {
             bindings = <
-&trans  &trans  &trans          &trans          &trans           &trans  &trans                                      &trans  &trans  &trans             &trans             &trans            &trans  &trans
-&trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans                                      &trans  &trans  &trans             &mmv MOVE_Y(100)   &trans            &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_X(-100)  &mmv MOVE_Y(-100)  &mmv MOVE_X(100)  &trans  &trans
-&trans  &trans  &trans          &msc SCRL_UP    &trans           &trans                  &trans      &trans                  &trans  &trans             &msc MOVE_Y(5)     &trans            &trans  &trans
-&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT          &trans  &trans  &trans      &trans  &trans  &trans          &msc MOVE_X(-5)    &msc MOVE_Y(-5)    &msc MOVE_X(5)    &trans  &trans
+&trans  &trans   &trans          &trans          &trans           &trans   &trans                                      &trans  &trans  &trans             &trans             &trans            &trans  &trans
+&trans  &mkp MB4 &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB5 &trans                                      &trans  &trans  &trans             &mmv MOVE_Y(-500)  &trans            &trans  &trans
+&trans  &trans   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mmv MOVE_X(-500)  &mmv MOVE_Y(500)   &mmv MOVE_X(500)  &trans  &trans
+&trans  &trans   &trans          &msc SCRL_DOWN  &trans           &trans                   &trans      &trans                  &trans  &trans             &msc MOVE_Y(-50)   &trans            &trans  &trans
+&trans  &trans   &msc SCRL_RIGHT &msc SCRL_UP    &msc SCRL_LEFT   &trans   &trans  &trans      &trans  &trans  &trans                  &msc MOVE_X(-50)   &msc MOVE_Y(50)    &msc MOVE_X(50)   &trans  &trans
             >;
         };
     };

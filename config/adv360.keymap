@@ -73,11 +73,11 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3             &kp F4             &kp F5            &kp F6            &tog 1                                      &mo 3   &kp F7             &kp F8            &kp F9             &kp F10           &kp F11  &kp F12
-&trans  &trans  &mkp MB4           &mkp LCLK          &mkp RCLK         &mkp MB5          &trans                                      &trans  &mkp MB4           &mkp LCLK         &mkp RCLK          &mkp MB5          &trans   &trans
-&trans  &trans  &mmv MOVE_X(-600)  &mmv MOVE_Y(-600)  &mmv MOVE_Y(600)  &mmv MOVE_X(600)  &none   &trans  &trans      &trans  &trans  &none   &mmv MOVE_X(-600)  &mmv MOVE_Y(600)  &mmv MOVE_Y(-600)  &mmv MOVE_X(600)  &trans   &trans
-&trans  &trans  &msc MOVE_X(-20)   &msc MOVE_Y(-20)   &msc MOVE_Y(20)   &msc MOVE_X(20)                   &trans      &trans                  &msc MOVE_X(-20)   &msc MOVE_Y(20)   &msc MOVE_Y(-20)   &msc MOVE_X(20)   &trans   &trans
-&trans  &trans  &trans             &trans             &mkp MCLK                           &trans  &trans  &trans      &trans  &trans  &trans                     &mkp MCLK         &trans             &trans            &trans   &trans
+&kp F1  &kp F2  &kp F3             &kp F4             &kp F5            &kp F6            &tog 1                                      &mo 3   &kp F7                &kp F8              &kp F9              &kp F10             &kp F11  &kp F12
+&trans  &trans  &mkp MB4           &mkp LCLK          &mkp RCLK         &mkp MB5          &trans                                      &trans  &mkp MB4              &mkp LCLK           &mkp RCLK           &mkp MB5            &trans   &trans
+&trans  &trans  &mmv MOVE_X(-900)  &mmv MOVE_Y(-900)  &mmv MOVE_Y(900)  &mmv MOVE_X(900)  &none   &trans  &trans      &trans  &trans  &none   &mmv MOVE_X(-1200)    &mmv MOVE_Y(1200)   &mmv MOVE_Y(-1200)  &mmv MOVE_X(1200)   &trans   &trans
+&trans  &trans  &msc MOVE_X(-15)   &msc MOVE_Y(-15)   &msc MOVE_Y(15)   &msc MOVE_X(15)                   &trans      &trans                  &msc MOVE_X(-20)      &msc MOVE_Y(20)     &msc MOVE_Y(-20)    &msc MOVE_X(20)     &trans   &trans
+&trans  &trans  &trans             &trans             &mkp MCLK                           &trans  &trans  &trans      &trans  &trans  &trans                        &mkp MCLK           &trans              &trans              &trans   &trans
             >;
         };
 
